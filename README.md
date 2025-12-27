@@ -1,8 +1,8 @@
-# waycore-rag-knowledge
+# waycore-knowledge
 
 > 🌲 Open-source survival & outdoor knowledge base for AI-powered field devices
 
-[![Build RAG Index](https://github.com/dmitry-grechko/waycore-rag-knowledge/actions/workflows/build.yml/badge.svg)](https://github.com/dmitry-grechko/waycore-rag-knowledge/actions/workflows/build.yml)
+[![Build RAG Index](https://github.com/dmitry-grechko/waycore-knowledge/actions/workflows/build.yml/badge.svg)](https://github.com/dmitry-grechko/waycore-knowledge/actions/workflows/build.yml)
 [![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Sources](https://img.shields.io/badge/Sources-58_Documents-blue.svg)](#included-sources)
 
@@ -21,13 +21,13 @@ This repository solves a common problem: **AI models need domain-specific knowle
 
 ### For Projects (Recommended)
 
-Download the pre-built index from [Releases](https://github.com/dmitry-grechko/waycore-rag-knowledge/releases):
+Download the pre-built index from [Releases](https://github.com/dmitry-grechko/waycore-knowledge/releases):
 
 ```bash
 # Download latest release
-curl -LO https://github.com/dmitry-grechko/waycore-rag-knowledge/releases/latest/download/knowledge.db
-curl -LO https://github.com/dmitry-grechko/waycore-rag-knowledge/releases/latest/download/vectors.idx
-curl -LO https://github.com/dmitry-grechko/waycore-rag-knowledge/releases/latest/download/manifest.json
+curl -LO https://github.com/dmitry-grechko/waycore-knowledge/releases/latest/download/knowledge.db
+curl -LO https://github.com/dmitry-grechko/waycore-knowledge/releases/latest/download/vectors.idx
+curl -LO https://github.com/dmitry-grechko/waycore-knowledge/releases/latest/download/manifest.json
 ```
 
 ### For Docker Builds
@@ -36,8 +36,8 @@ curl -LO https://github.com/dmitry-grechko/waycore-rag-knowledge/releases/latest
 # Multi-stage: download index
 FROM curlimages/curl:latest as rag-index
 WORKDIR /data
-RUN curl -LO https://github.com/dmitry-grechko/waycore-rag-knowledge/releases/latest/download/knowledge.db && \
-    curl -LO https://github.com/dmitry-grechko/waycore-rag-knowledge/releases/latest/download/vectors.idx
+RUN curl -LO https://github.com/dmitry-grechko/waycore-knowledge/releases/latest/download/knowledge.db && \
+    curl -LO https://github.com/dmitry-grechko/waycore-knowledge/releases/latest/download/vectors.idx
 
 # Your application
 FROM python:3.11-slim
@@ -144,8 +144,8 @@ If you want to rebuild the index yourself:
 
 ```bash
 # Clone repository
-git clone https://github.com/dmitry-grechko/waycore-rag-knowledge.git
-cd waycore-rag-knowledge
+git clone https://github.com/dmitry-grechko/waycore-knowledge.git
+cd waycore-knowledge
 
 # Install dependencies
 pip install -r scripts/requirements.txt
