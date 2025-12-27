@@ -27,7 +27,6 @@ This document provides full attribution for all source materials in this reposit
 | Document | License | Source URL |
 |----------|---------|------------|
 | USGS Topographic Map Symbols | public_domain | [Link](https://pubs.usgs.gov/gip/TopographicMapSymbols/topomapsymbols.pdf) |
-| American Practical Navigator (Bowditch) | public_domain | [Link](https://msi.nga.mil/api/publications/download?key=16693975/SFH00000/Bowditch_Vol_1.pdf) |
 
 ### 🏥 First Aid
 

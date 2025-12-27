@@ -1,0 +1,226 @@
+name: Build RAG Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sources/**'
+      - 'scripts/**'
+      - '.github/workflows/build.yml'
+  
+  pull_request:
+    branches: [main]
+    paths:
+      - 'sources/**'
+      - 'scripts/**'
+  
+  workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: 'Force full rebuild'
+        required: false
+        default: false
+        type: boolean
+  
+  schedule:
+    # Weekly rebuild on Sundays at 4 AM UTC
+    - cron: '0 4 * * 0'
+
+env:
+  PYTHON_VERSION: '3.11'
+  EMBEDDING_MODEL: 'all-MiniLM-L6-v2'
+
+jobs:
+  build:
+    name: Build Knowledge Index
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+          cache-dependency-path: 'scripts/requirements.txt'
+      
+      - name: Cache embedding model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/torch/sentence_transformers
+          key: model-${{ env.EMBEDDING_MODEL }}
+      
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+      
+      - name: Calculate source hash
+        id: source-hash
+        run: |
+          HASH=$(find sources/ -type f -exec sha256sum {} \; | sort | sha256sum | cut -d' ' -f1)
+          echo "hash=${HASH:0:16}" >> $GITHUB_OUTPUT
+          echo "Source hash: ${HASH:0:16}"
+      
+      - name: Build RAG index
+        run: |
+          echo "Building RAG index..."
+          python scripts/build_index.py \
+            --sources-dir sources/ \
+            --output-dir generated/ \
+            --model "${{ env.EMBEDDING_MODEL }}" \
+            --verbose
+      
+      - name: Generate manifest
+        run: |
+          python scripts/generate_manifest.py \
+            --output generated/manifest.json \
+            --version "1.0.${{ github.run_number }}" \
+            --source-hash "${{ steps.source-hash.outputs.hash }}" \
+            --model "${{ env.EMBEDDING_MODEL }}"
+      
+      - name: Verify index
+        run: |
+          python scripts/verify_index.py generated/
+      
+      - name: Build summary
+        run: |
+          echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          python -c "
+          import json
+          with open('generated/manifest.json') as f:
+              m = json.load(f)
+          print(f'- **Version**: {m[\"version\"]}')
+          print(f'- **Total Entries**: {m[\"total_entries\"]:,}')
+          print(f'- **Source Hash**: \`{m[\"source_hash\"]}\`')
+          print()
+          print('### Categories')
+          print('| Category | Entries |')
+          print('|----------|---------|')
+          for cat, count in m['categories'].items():
+              print(f'| {cat} | {count:,} |')
+          " >> $GITHUB_STEP_SUMMARY
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### File Sizes" >> $GITHUB_STEP_SUMMARY
+          ls -lh generated/ >> $GITHUB_STEP_SUMMARY
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rag-index-${{ github.sha }}
+          path: |
+            generated/knowledge.db
+            generated/vectors.idx
+            generated/manifest.json
+          retention-days: 30
+      
+      - name: Create Release
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: RAG Index v1.0.${{ github.run_number }}
+          body: |
+            ## RAG Knowledge Index v1.0.${{ github.run_number }}
+            
+            **Source Hash**: `${{ steps.source-hash.outputs.hash }}`
+            **Model**: `${{ env.EMBEDDING_MODEL }}`
+            **Built**: ${{ github.event.head_commit.timestamp || github.event.repository.updated_at }}
+            
+            ### Quick Start
+            
+            ```bash
+            # Download the index
+            curl -LO https://github.com/${{ github.repository }}/releases/download/v1.0.${{ github.run_number }}/knowledge.db
+            curl -LO https://github.com/${{ github.repository }}/releases/download/v1.0.${{ github.run_number }}/vectors.idx
+            ```
+            
+            ### Files
+            
+            | File | Description | Size |
+            |------|-------------|------|
+            | `knowledge.db` | SQLite + FTS5 search index | ~100 MB |
+            | `vectors.idx` | Hnswlib vector embeddings | ~80 MB |
+            | `manifest.json` | Build metadata | <1 KB |
+            
+            See the [README](https://github.com/${{ github.repository }}#readme) for usage instructions.
+          files: |
+            generated/knowledge.db
+            generated/vectors.idx
+            generated/manifest.json
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test:
+    name: Test Index
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      
+      - name: Download built index
+        uses: actions/download-artifact@v4
+        with:
+          name: rag-index-${{ github.sha }}
+          path: generated/
+      
+      - name: Install test dependencies
+        run: |
+          pip install pytest sentence-transformers hnswlib
+      
+      - name: Run search tests
+        run: |
+          python -c "
+          import sqlite3
+          import hnswlib
+          from sentence_transformers import SentenceTransformer
+          
+          # Load index
+          conn = sqlite3.connect('generated/knowledge.db')
+          index = hnswlib.Index(space='cosine', dim=384)
+          index.load_index('generated/vectors.idx')
+          model = SentenceTransformer('all-MiniLM-L6-v2')
+          
+          # Test queries
+          tests = [
+              ('fire starting', 'survival'),
+              ('compass navigation', 'navigation'),
+              ('wound bleeding', 'first_aid'),
+              ('bowline knot', 'knots'),
+          ]
+          
+          print('Running search tests...')
+          for query, expected in tests:
+              emb = model.encode(query)
+              labels, _ = index.knn_query([emb], k=3)
+              
+              cursor = conn.execute(
+                  'SELECT category FROM entries WHERE rowid = ?',
+                  (int(labels[0][0]),)
+              )
+              actual = cursor.fetchone()[0]
+              
+              status = '✅' if actual == expected else '⚠️'
+              print(f'{status} \"{query}\" -> {actual} (expected: {expected})')
+          
+          print('\\nAll tests completed!')
+          "
+

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="Ag Data Commons makes USDA-funded research data systems and data products Findable, Accessible, Interoperable, and Reusable." />
+<link rel="canonical" href="https://www.nal.usda.gov/services/agdatacommons" />
+<meta name="msvalidate.01" content="4A24138736DC6AE3D5589865B3297045" />
+<meta name="google-site-verification" content="fVO2KZw8zCAz6pbIQWkKrFqKTe1Clkld5IDVAHLVqdE" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/global_subtheme/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Ag Data Commons User Guide | National Agricultural Library</title>
+    <link rel="apple-touch-icon-precomposed" href="/themes/custom/nal_global/images/favicons/favicon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/themes/custom/nal_global/images/favicons/favicon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/themes/custom/nal_global/images/favicons/favicon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/themes/custom/nal_global/images/favicons/favicon-144.png">
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_i4GUcKiE3hNP0h_r4ZQM9hkgvCswdILFHOmaWayD_YM.css?delta=0&amp;language=en&amp;theme=global_subtheme&amp;include=eJyNkm1uwzAIhi_kxEeyiE1dNgcqQ5rm9rPXTKsyLdsfI-Dh4xWOUtFHmW_CyKZjLjJBCbpMdsUZhyHLHSvPLRkK8bu6eKjghj-rhmECZqznyGImfIpcRAxrYLhTBqM_6CtCanTAhyEnTKcwtWg1-JeYApssFhRj3yH0OcT5tETJMEwV-FdSJVIzFIW18S_eE091uUEZ4Q0erinqW37FdtcdTuT34Wpb6VOP6UXXpG4Xk0hjP-jm205Rivve_tjnJfNs0cWtlDBAwWqemMzppoazn0DR3QlX9Z_vOEtaCroVp4vU2e92xIL9J40JDajoaJLzCTajKuSf-f58AFcnD9A" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xhkvhmO8Fs1dKtQGVR1slMHBRZjSz6zKBcMczQpWMZc.css?delta=1&amp;language=en&amp;theme=global_subtheme&amp;include=eJyNkm1uwzAIhi_kxEeyiE1dNgcqQ5rm9rPXTKsyLdsfI-Dh4xWOUtFHmW_CyKZjLjJBCbpMdsUZhyHLHSvPLRkK8bu6eKjghj-rhmECZqznyGImfIpcRAxrYLhTBqM_6CtCanTAhyEnTKcwtWg1-JeYApssFhRj3yH0OcT5tETJMEwV-FdSJVIzFIW18S_eE091uUEZ4Q0erinqW37FdtcdTuT34Wpb6VOP6UXXpG4Xk0hjP-jm205Rivve_tjnJfNs0cWtlDBAwWqemMzppoazn0DR3QlX9Z_vOEtaCroVp4vU2e92xIL9J40JDajoaJLzCTajKuSf-f58AFcnD9A" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/818","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","theme":"themes\/custom\/global_subtheme"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"G-3B6JN4Z2CV","consentMode":false,"otherIds":["G-ER98FFN75C"],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJyNU9FyhCAM_CGUT2Ii5DhaIDck6Pn3hZ4zvbGt-hIm7iZZN2CpoLaUHpQxC48-0gTRcJ3kjgmHwdOMJacGmhjyJyu7q8iN_qoahglyxnJMqSKUDyk2EqO5QLwRCRaTYQ4eJJyw7wiusQ0-BbNDd0gO9qRbaF-LwCVbIqxUxTDaLtJ0ISH7w5JmeL1iwaOEBGW96kGTQNn1gnPVHKRtoUA-FVvZgYnk6U8Wkw3t6I5y6_qWqbaKrkO7Uh8Qxy1Vu0uotzksa-xS9nDlxbHyRD6iEfDat7DPR_iAp9o24QLbfq9X3XRaiurnb_bD3pDXnG7LEhwaiFhEhxxE8cqCSU_AqCrf0LVXYzYB0DqsEizrf5HRuqzmgAvr7zgmcjWiWnC6UUl6O0eM2B_i6FAgRB4Z5nOSkPcHvRIyg_-N9_AF1Xmacg","theme":"global_subtheme","theme_token":null},"ajaxTrustedUrl":{"https:\/\/usdasearch.usda.gov\/search":true},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":".social-link,.usa-button,.important-links,.site-branding__usda","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"You are leaving a federal website to go to an external one.  We are not responsible for the content on external websites.","extHideIcons":false,"mailtoClass":"mailto","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":[],"extExcludeNoreferrer":""}},"sitewideAlert":{"refreshInterval":15000,"automaticRefresh":false},"user":{"uid":0,"permissionsHash":"4b5cff453117f61b075b66e9d8ead98e283c79491dda5dd5694e53e6f641ac4d"}}</script>
+<script src="/sites/default/files/js/js_pK6bXU70LDTf4C_YLrE4YK2lwMJ0ORhPJ1X7K6KdbtQ.js?scope=header&amp;delta=0&amp;language=en&amp;theme=global_subtheme&amp;include=eJyFTu0KwjAMfKGufaSStVmtpslosk3f3okDQRn-uXDcV5J0DEnaLIxs6hkoFpIRaBhGYMbu8G5U-RZyX2Ygf1D3dkVdRrtgw7DoltUVkUIYDUooO3xzD1e4u8_IkdJquNWMEQi7hcrV3KIT5iJrPCpgTz2sJg2nik-Z3YbjJL2F43qk_Ts2n9GgknqFFf-aTMrefGprqArlV3_BE1bMg-s"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?t5oibi"></script>
+<script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=USDA&amp;subagency=ARS-NAL&amp;siteplatform=Drupal" id="_fed_an_ua_tag" async></script>
+
+  </head>
+  <body>
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="/themes/custom/nal_global/uswds/img/us_flag_small.png" alt="" />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here&apos;s how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+          <span class="usa-banner__button-text">Here&apos;s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default" style="display: none;">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <svg width="40px" height="40px" class="usa-banner__icon usa-media-block__img banner-svg" id="dot_gov_icon" data-name="dot gov icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+            <defs>
+              <style>
+                .icon-dot-gov-1 {
+                  fill: #007faa;
+                }
+
+                .icon-dot-gov-2 {
+                  fill: none;
+                  stroke: #046b99 !important;
+                  stroke-miterlimit: 10;
+                }
+              </style>
+            </defs>
+            <title>dot gov icon</title>
+            <path class="icon-dot-gov-1" d="M36.5,20.91v1.36H35.15a0.71,0.71,0,0,1-.73.68H18.23a0.71,0.71,0,0,1-.73-0.68H16.14V20.91l10.18-4.07Zm0,13.57v1.36H16.14V34.48a0.71,0.71,0,0,1,.73-0.68h18.9A0.71,0.71,0,0,1,36.5,34.48ZM21.57,23.62v8.14h1.36V23.62h2.71v8.14H27V23.62h2.71v8.14h1.36V23.62h2.71v8.14h0.63a0.71,0.71,0,0,1,.73.68v0.68H17.5V32.45a0.71,0.71,0,0,1,.73-0.68h0.63V23.62h2.71Z" />
+            <circle class="icon-dot-gov-2" cx="27" cy="27.12" r="26" />
+          </svg>
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br>
+                A <strong>.gov</strong> website belongs to an official government organization in the United States.            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <svg width="40px" height="40px" class="usa-banner__icon usa-media-block__img banner-svg" id="https_icon" data-name="https icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+            <defs>
+              <style>
+                .icon-https-1 {
+                  fill: #549500;
+                }
+
+                .icon-https-2 {
+                  fill: none;
+                  stroke: #458600;
+                  stroke-miterlimit: 10;
+                }
+              </style>
+            </defs>
+            <title>https icon</title>
+            <path class="icon-https-1" d="M34.72,34.84a1.29,1.29,0,0,1-1.29,1.29H20.57a1.29,1.29,0,0,1-1.29-1.29V27.12a1.29,1.29,0,0,1,1.29-1.29H21V23.26a6,6,0,0,1,12,0v2.57h0.43a1.29,1.29,0,0,1,1.29,1.29v7.72Zm-4.29-9V23.26a3.43,3.43,0,0,0-6.86,0v2.57h6.86Z" />
+            <circle class="icon-https-2" cx="27" cy="27.12" r="26" />
+          </svg>
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br>
+                A <strong>lock</strong> ( <span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-hidden="true"><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg></span> ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<header data-component-id="nal_global:header__extended" class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    
+<div data-component-id="nal_global:site_branding" class="nal-site-branding">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.04 100.58" aria-labelledby="usda-logo">
+  <title id="usda-logo">USDA Logo</title>
+  <defs>
+    <style>.usda-logo-1{fill:#004785;}.usda-logo-2{fill:#005941;}</style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="usda-logo-1" d="M33.36,4.09l-.19,25.36c0,10.54-6.26,14.63-14.69,14.63C11.22,44.08,2,40.86,2,29.88V4.09A3.16,3.16,0,0,0,0,1.3H11.9A3.11,3.11,0,0,0,10,4.09v26c0,4.34,1.49,10.48,9.55,10.48,7.38,0,10-4.84,10-11L29.45,4.09A3,3,0,0,0,27.78,1.3H35A3,3,0,0,0,33.36,4.09Z"/>
+      <path class="usda-logo-1" d="M50.15,44.08a26.37,26.37,0,0,1-11.9-3l-.31-10.48c1.18,4.4,4.9,10.23,11.35,10.23,6.13,0,8-4.4,8-7.44,0-6-5.39-6.76-11-9.8s-8.19-6.51-8.19-11.22C38.06,4,45.94.62,51.58.62a19.92,19.92,0,0,1,9.36,2.29l.31,9.18c-.87-3.29-4.4-8.25-10.35-8.25-4.72,0-6.58,3.29-6.58,6,0,3.78,2.67,5.2,8.5,7.87S64.6,22.44,64.6,31.06C64.6,38.81,57.78,44.08,50.15,44.08Z"/>
+      <path class="usda-logo-1" d="M84.62,43.46H68.69a3.08,3.08,0,0,0,1.61-2.79V4.09A3,3,0,0,0,68.69,1.3H85.18c20.4,0,24.49,14.45,24.49,20.46C109.67,32.55,101.36,43.46,84.62,43.46ZM83.88,4.4c-1.49,0-4.78,0-5.71.13V40.24h5c14,0,17.92-9.43,17.92-18.48C101.05,14.32,96.71,4.4,83.88,4.4Z"/>
+      <path class="usda-logo-1" d="M133.77,43.46c1.62-.87,1.93-1.73,1.49-3-.18-.62-1.8-4.4-3.53-8.61H116.54a89.58,89.58,0,0,0-3.47,8.55c-.56,1.49-.25,2.36,1.42,3.1h-8.55a7.38,7.38,0,0,0,2.91-3C110,38.07,126.33,0,126.33,0s16.5,38.07,17.61,40.42a5.45,5.45,0,0,0,3.1,3ZM124,13.39s-4.22,10.54-6.2,15.19H130.3C127.39,21.7,124,13.39,124,13.39Z"/>
+      <path class="usda-logo-2" d="M145.18,49.42S55,47.18,1.52,75.65c0,0,56.63-22.39,143.66-20.15Z"/>
+      <path class="usda-logo-2" d="M1.52,49.42s30.4.32,49.27,7.36c0,0-38.71-3.2-49.27-1.6Z"/>
+      <path class="usda-logo-2" d="M1.52,59.34s21.76-1,34.88.32c0,0-31.68,3.84-34.88,5.44Z"/>
+      <path class="usda-logo-2" d="M130.23,60.32h-.47C103.53,60.83,48.51,64,1.54,80.59v20l143.66,0V60.32S139.62,60.15,130.23,60.32Z"/>
+    </g>
+  </g>
+</svg>
+
+  <div class="nal-site-branding__text">
+          <div class="nal-site-branding__site-name"><a href="/" title="Home" rel="home">National Agricultural Library</a></div>
+        <div class="nal-site-branding__usda site-branding__usda"><a href="https://www.usda.gov">U.S. Department of Agriculture</a></div>
+  </div>
+</div>
+
+    <button data-component-id="nal_global:menu_button" class="usa-menu-btn cursor-pointer" type="button">Menu</button>
+
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      
+<button class="usa-nav__close nal-close-button bg-transparent border-0 cursor-pointer" data-component-id="nal_global:close_button">
+  <svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#close"></use></svg>
+  <span class="usa-sr-only">Close</span>
+</button>
+
+
+      <div class="usa-nav__secondary">
+            
+<ul id="block-global-subtheme-secondarylinks" data-component-id="nal_global:secondary_links" class="usa-nav__secondary-links">
+      <li class="usa-nav__secondary-item">
+      <a href="/ask-question" data-drupal-link-system-path="node/14">Ask A Question</a>
+    </li>
+      <li class="usa-nav__secondary-item">
+      <a href="/contact-us" data-drupal-link-system-path="node/10">Contact Us</a>
+    </li>
+      <li class="usa-nav__secondary-item">
+      <a href="https://digitop.nal.usda.gov/">DigiTop</a>
+    </li>
+  </ul>
+
+
+<div id="block-global-subtheme-webform-usasearch" class="block block-webform block-webform-block">
+  
+    
+      <form class="webform-submission-form webform-submission-add-form webform-submission-usasearch-form webform-submission-usasearch-add-form webform-submission-usasearch-node-818-form webform-submission-usasearch-node-818-add-form usa-search usa-search--small js-webform-details-toggle webform-details-toggle" role="search" data-drupal-selector="webform-submission-usasearch-node-818-add-form" action="https://usdasearch.usda.gov/search" method="get" id="webform-submission-usasearch-node-818-add-form" accept-charset="UTF-8">
+  
+  <div class="js-webform-type-search webform-type-search js-form-item form-item form-type-search js-form-type-search form-item-query js-form-item-query form-no-label">
+      <label for="edit-query" class="usa-label visually-hidden">Site Search</label>
+        <input class="usagov-search-autocomplete form-search usa-input" data-drupal-selector="edit-query" type="search" id="edit-query" name="query" size="60" maxlength="128" placeholder="What would you like to find?" />
+
+        </div>
+<input data-drupal-selector="edit-affiliate" type="hidden" name="affiliate" value="www.nal.usda.gov" />
+<div data-drupal-selector="edit-actions" class="form-actions webform-actions js-form-wrapper form-wrapper" id="edit-actions--lAkwi5tK3mk">
+          
+<button class="webform-button--submit button button--primary js-form-submit form-submit usa-button" data-drupal-selector="edit-actions-submit" type="submit" id="edit-actions-submit" name="op" value="Search" data-component-id="nal_global:button"><svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#search"></use></svg>
+<span class="nal-button__text">Search</span>
+</button>
+
+
+
+
+</div>
+
+
+  
+</form>
+
+  </div>
+
+
+
+  
+      </div>
+
+          
+                    <ul data-component-id="nal_global:primary_navigation" class="usa-nav__primary usa-accordion">
+                <li class="usa-nav__primary-item">
+        
+                          <a href="/" class="usa-nav-link" data-drupal-link-system-path="&lt;front&gt;"><span>Home</span></a>
+        
+              </li>
+                <li class="usa-nav__primary-item">
+        
+                          
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-2"><span>Topics</span></button>
+        
+                                                <ul id="extended-nav-section-2" hidden class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/animal-health-and-welfare" data-drupal-link-system-path="node/126"><span>Animal Health and Welfare</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/economics-business-and-trade" data-drupal-link-system-path="node/136"><span>Economics, Business, and Trade</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/farms-and-agricultural-production-systems" data-drupal-link-system-path="node/134"><span>Farms and Agricultural Production Systems</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/human-nutrition-and-food-safety" data-drupal-link-system-path="node/141"><span>Human Nutrition and Food Safety</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/natural-resources-conservation-environment" data-drupal-link-system-path="node/132"><span>Natural Resources, Conservation, and Environment</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/plant-production-gardening" data-drupal-link-system-path="node/135"><span>Plant Production and Gardening</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/rural-development-communities" data-drupal-link-system-path="node/125"><span>Rural Development and Communities</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/topics" data-drupal-link-system-path="node/479"><span>All Topics</span></a>
+        
+              </li>
+        </ul>
+  
+              </li>
+                <li class="usa-nav__primary-item">
+        
+                          
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-3"><span>Research Tools</span></button>
+        
+                                                <ul id="extended-nav-section-3" hidden class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://search.nal.usda.gov" title="SEARCH the National Agricultural Library"><span>NAL SEARCH</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://search.nal.usda.gov/discovery/search?vid=01NAL_INST:MAIN&amp;search_scope=pubag"><span>PubAg</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://agdatacommons.nal.usda.gov"><span>Ag Data Commons</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://search.nal.usda.gov/discovery/search?vid=01NAL_INST:MAIN&amp;search_scope=agricola"><span>AGRICOLA</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://lod.nal.usda.gov/" title="National Agricultural Library (NALT) Concept Space"><span>NALT Concept Space</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://fdc.nal.usda.gov/"><span>Food Data Central</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/research-tools/food-safety-research-projects" data-drupal-link-system-path="node/215"><span>Food Safety Research Projects Database</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://archivesspace.nal.usda.gov/"><span>Manuscript Collections Search</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/research-tools/research-tools" data-drupal-link-system-path="node/163"><span>All Research Tools</span></a>
+        
+              </li>
+        </ul>
+  
+              </li>
+                <li class="usa-nav__primary-item">
+        
+                          
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-4"><span>Collections</span></button>
+        
+                                                <ul id="extended-nav-section-4" hidden class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://naldc.nal.usda.gov" title="Link to the National Agricultural Library Digital Collections"><span>Digital Collections</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/collections/exhibits" data-drupal-link-system-path="node/658"><span>Exhibits</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/collections/special-collections" data-drupal-link-system-path="node/657"><span>Special Collections</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/collections/stories" data-drupal-link-system-path="node/137"><span>Stories From the Collection</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/collections/government-documents" data-drupal-link-system-path="node/758"><span>Government Documents</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/all-collections" data-drupal-link-system-path="node/484"><span>All Collections</span></a>
+        
+              </li>
+        </ul>
+  
+              </li>
+                <li class="usa-nav__primary-item">
+        
+                          
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-5"><span>Data</span></button>
+        
+                                                <ul id="extended-nav-section-5" hidden class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/data-management-planning" data-drupal-link-system-path="node/864"><span>Data Management Planning Services</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/data-management-planning#toc-create-a-dmp" data-drupal-link-system-path="node/864"><span>Create a DMP</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/data-management-planning#toc-dmp-feedback-and-review" data-drupal-link-system-path="node/864"><span>DMP Feedback and Review</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/data-management-planning#toc-find-a-data-repository" title="Resources for finding a suitable data repository" data-drupal-link-system-path="node/864"><span>Find a Data Repository</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/data-management-planning#toc-data-management-glossary" title="Helpful definitions of Data Management terminology" data-drupal-link-system-path="node/864"><span>Data Management Glossary</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/data-management-planning#toc-data-management-videos" data-drupal-link-system-path="node/864"><span>Data Management Videos</span></a>
+        
+              </li>
+        </ul>
+  
+              </li>
+                <li class="usa-nav__primary-item">
+        
+                          
+          <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="extended-nav-section-6"><span>Services</span></button>
+        
+                                                <ul id="extended-nav-section-6" hidden class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/public-access" data-drupal-link-system-path="node/175"><span>Public Access and Open Science at USDA</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/data-management-planning" data-drupal-link-system-path="node/864"><span>Data Management Planning</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services/agdatacommons" class="usa-current is-active" data-drupal-link-system-path="node/818" aria-current="page"><span>Ag Data Commons User Guide</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="https://digitop.nal.usda.gov/"><span>DigiTop</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/borrow-materials" data-drupal-link-system-path="node/11"><span>Borrow Materials</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/ask-question" data-drupal-link-system-path="node/14"><span>Reference and Research</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/services" data-drupal-link-system-path="node/165"><span>All Services</span></a>
+        
+              </li>
+        </ul>
+  
+              </li>
+                <li class="usa-nav__primary-item">
+        
+                          
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-7"><span>About Us</span></button>
+        
+                                                <ul id="extended-nav-section-7" hidden class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/about-the-library" data-drupal-link-system-path="node/3"><span>About the Library</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/about-us/events" data-drupal-link-system-path="node/171"><span>Events</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/programs" data-drupal-link-system-path="node/100"><span>Program Areas</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/about-us/internships" data-drupal-link-system-path="node/13"><span>Internships</span></a>
+        
+              </li>
+                <li class="usa-nav__submenu-item">
+        
+                          <a href="/contact-us" data-drupal-link-system-path="node/10"><span>Contact Us</span></a>
+        
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+
+
+
+
+      </div>
+  </nav>
+</header>
+
+
+  <div class="grid-container">
+    <div class="grid-row grid-gap">
+
+                  <section class="tablet:grid-col-12">
+
+                                      <div class="highlighted">  <div class="region region--highlighted">
+    <div id="block-global-subtheme-sitewidealert" class="block block-sitewide-alert-block">
+  
+    
+      <div data-sitewide-alert role="banner"></div>
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <main id="main-content">
+              <div class="region region--content">
+    <div id="block-global-subtheme-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+        
+<nav data-component-id="nal_global:breadcrumbs" aria-label="Breadcrumbs" class="usa-breadcrumb">
+  <ol class="usa-breadcrumb__list">
+                <li class="usa-breadcrumb__list-item">
+                  <a href="/" class="usa-breadcrumb__link"><span>Home</span></a>
+              </li>
+                <li class="usa-breadcrumb__list-item">
+                  <a href="https://www.nal.usda.gov/collections/stories" class="usa-breadcrumb__link"><span>Stories From the Collection</span></a>
+              </li>
+                              <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+                  <span>Cranberries</span>
+              </li>
+      </ol>
+</nav>
+
+
+
+  </div>
+<div id="block-global-subtheme-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="margin-top-0"><span>Ag Data Commons User Guide</span>
+</h1>
+
+
+  </div>
+<div id="block-global-subtheme-content" class="block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-page node--view-mode-full">
+
+  
+    
+
+  
+  <div>
+      <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      <div class="block block-layout-builder block-extra-field-blocknodepagecontent-moderation-control">
+  
+    
+      
+  </div>
+
+    </div>
+  </div>
+    
+  <div class="layout">
+          
+<div class="nal-layout__section-heading">
+      <h2  class="nal-layout__section-heading__title" id="section--what-is-ag-data-commons">What is Ag Data Commons</h2>
+    </div>
+
+    
+    <div class="layout__container grid-row grid-gap-4">
+        <div class="layout__region layout__region--content grid-col-12">
+    <div class="block block-layout-builder block-inline-blocktext">
+  
+    
+      
+  <p>The <a href="https://agdatacommons.nal.usda.gov">Ag Data Commons</a> is a research data catalog and repository for public access to data produced during research funded or co-funded by the United States Department of Agriculture.</p>
+<p>In accordance with the USDA Public Access DR, all USDA-funded researchers must ensure that a catalog record indicating the point of public access to their data is created in the Ag Data Commons. Supplementary repository service is optional and is open to data without a community- or subject-specific home.</p>
+<p>Through the Ag Data Commons, the USDA National Agricultural Library (NAL) provides services to make USDA-funded research data systems and data products Findable, Accessible, Interoperable, and Reusable (FAIR). &nbsp;Each submitted dataset goes through a review by Ag Data Commons data curators -- NAL metadata librarians who ensure completeness and accuracy of the submission before approving it for publication. &nbsp;</p>
+
+
+
+  </div>
+
+  </div>
+    </div>
+
+    <div class="layout__background"></div>
+  </div>
+
+    
+  <div class="layout--bg layout--bg--base-lightest layout">
+          
+<div class="nal-layout__section-heading">
+      <h2  class="nal-layout__section-heading__title" id="section--eligibility-for-submissio">Eligibility for submissions to the Ag Data Commons</h2>
+    </div>
+
+    
+    <div class="layout__container grid-row grid-gap-4">
+        <div class="layout__region layout__region--content grid-col-12">
+    <div class="block block-layout-builder block-inline-blocktext">
+  
+    
+      
+  <p>If you are thinking about sharing your research output through the Ag Data Commons, please make sure that your submission meets the following conditions:</p>
+<p>1. <strong>USDA-funding</strong>. A submission must satisfy at least one of the two USDA-funding criteria:</p>
+<p>&nbsp; &nbsp;a. One of the co-authors of the data product is affiliated with USDA, or</p>
+<p>&nbsp; &nbsp;b. It was produced as a result of a research project funded or co-funded by USDA, for example through NIFA grant or through an agency-approved research project.</p>
+<p>2. <strong>Content type</strong>. The item(s) considered for submission must fall into one of the following types:</p>
+<p>&nbsp; &nbsp;a. Data (e.g. tabular data, genomic sequences, multimedia materials)</p>
+<p>&nbsp; &nbsp;b. Data product (e.g., database)*</p>
+<p>&nbsp; &nbsp;c. Non-executable software created to help users process or model data*.</p>
+<p>3. <strong>Level of access</strong> - public. Your submission must contain only data and/or data products intended for public access. The Ag Data Commons does not accept datasets with Personally Identifiable Information (PII).</p>
+<p>*See <a href="/services/agdatacommons/polices-and-documentation">Ag Data Commons Collection Policy</a>&nbsp;for details about these content types.&nbsp;&nbsp;</p>
+
+
+
+  </div>
+
+  </div>
+    </div>
+
+    <div class="layout__background"></div>
+  </div>
+
+    
+  <div class="layout">
+          
+<div class="nal-layout__section-heading">
+      <h2  class="nal-layout__section-heading__title" id="section--account-creation">Account creation</h2>
+    </div>
+
+    
+    <div class="layout__container grid-row grid-gap-4">
+        <div class="layout__region layout__region--content grid-col-12">
+    <div class="block block-layout-builder block-inline-blocktext">
+  
+    
+      
+  <p>After verifying that your submission is eligible to deposit in the Ag Data Commons, you can create an account.&nbsp;Note that a user account is only required to submit data resources to the Ag Data Commons. Those wishing to view or download data do not require accounts.</p>
+<p>To create an account, select “<strong>Log In</strong>” at the upper right corner of the Ag Data Commons home page. You will be prompted to select the user type for your account. Options include:</p>
+<ul>
+<li><strong>Customer:&nbsp;</strong>Use this option for non-federal users (e.g., university partners, grant recipients, etc.). You can use Login.gov or eAuth to log into your account.</li>
+<li><strong>USDA Employee/Contractor:&nbsp;</strong>Use this option if you work directly for the USDA. You can use your PIV card, USDA MobileLinc, or USDA Work Account through Microsoft to log into your account.</li>
+<li><strong>Other Federal Employee/Contractor:</strong>&nbsp;Use this option if you work for a federal department outside the USDA. You can use your PIC/CAC PIN or Login.gov to log into your account.</li>
+</ul>
+<p>Your account will be automatically created the first time you log in.</p>
+<p>New users will start with zero storage capacity and need to request storage space from the curation team to upload dataset files. The Data Submission Manual provides instructions on this process. &nbsp;A curator will review your request and may follow up with you for additional information before granting the request.</p>
+
+
+
+  </div>
+
+  </div>
+    </div>
+
+    <div class="layout__background"></div>
+  </div>
+
+    
+  <div class="layout--bg layout--bg--primary-darker layout">
+          
+<div class="nal-layout__section-heading">
+      <h2  class="nal-layout__section-heading__title" id="section--more-on-ag-data-commons">More on Ag Data Commons</h2>
+    </div>
+
+    
+    <div class="layout__container grid-row grid-gap-4">
+        <div class="layout__region layout__region--content grid-col-12">
+    <div class="block block-layout-builder block-inline-blockimportant-links">
+  
+    
+                  
+<ul data-component-id="nal_global:important_links" class="nal-important-links">
+      <li class="nal-important-links__item">
+      <a class="nal-important-link" href="https://www.nal.usda.gov/services/agdatacommons/data-submission-manual">
+        Data Submission Manual
+        <svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#arrow_forward"></use></svg>
+      </a>
+    </li>
+      <li class="nal-important-links__item">
+      <a class="nal-important-link" href="https://www.nal.usda.gov/services/agdatacommons/policies">
+        Ag Data Commons Collection Policies
+        <svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#arrow_forward"></use></svg>
+      </a>
+    </li>
+      <li class="nal-important-links__item">
+      <a class="nal-important-link" href="https://agdatacommons.nal.usda.gov/">
+        Ag Data Commons Portal [agdatacommons.nal.usda.gov]
+        <svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#arrow_forward"></use></svg>
+      </a>
+    </li>
+      <li class="nal-important-links__item">
+      <a class="nal-important-link" href="https://agdatacommons.nal.usda.gov/stats">
+        Ag Data Commons Usage Statistics [agdatacommons.nal.usda.gov]
+        <svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#arrow_forward"></use></svg>
+      </a>
+    </li>
+      <li class="nal-important-links__item">
+      <a class="nal-important-link" href="https://www.zotero.org/groups/925027/ag_data_commons/collections/AQ8KNDKU">
+        View Articles Citing Ag Data Commons [zotero.org]
+        <svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#arrow_forward"></use></svg>
+      </a>
+    </li>
+      <li class="nal-important-links__item">
+      <a class="nal-important-link" href="https://www.nal.usda.gov/services/agdatacommons/dashboard">
+        Ag Data Commons Dashboard: Trend in Citations to ADC
+        <svg aria-hidden="true" class="usa-icon" focusable="false" role="img"><use href="/themes/custom/nal_global/uswds/img/sprite.svg#arrow_forward"></use></svg>
+      </a>
+    </li>
+  </ul>
+
+
+
+  </div>
+
+  </div>
+    </div>
+
+    <div class="layout__background"></div>
+  </div>
+
+
+  </div>
+
+</article>
+
+  </div>
+<div class="views-element-container block block-views block-views-blockcurators-node-curators-block" id="block-global-subtheme-views-block-curators-node-curators-block">
+  
+      <h2 class="font-body-xs margin-y-1">Page Content Curated By</h2>
+    
+      <div><div class="js-view-dom-id-b5a8cf086cd39caaf3df19a89d2c62549037121c006270a3c172ff54ad61f36b">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="margin-y-05 views-row"><div class="views-field views-field-name"><span class="field-content"><a href="https://www.nal.usda.gov/programs/knowledge-services">Knowledge Services Division (KSD)</a></span></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+          </main>
+              </section>
+
+            
+                </div>
+  </div>
+
+  <footer class="usa-footer">
+                  <div class="usa-footer__primary-section">
+          <div class="grid-container">
+              <div class="region region--footer">
+      
+<nav id="block-global-subtheme-footer" data-component-id="nal_global:footer_navigation" class="usa-footer__nav" aria-label="Footer menu">
+  
+    
+  <ul class="grid-row grid-gap">
+          <li class="usa-footer__primary-content">
+        <a href="/" class="usa-footer__primary-link" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+      </li>
+          <li class="usa-footer__primary-content">
+        <a href="https://www.nal.usda.gov/sitemap" class="usa-footer__primary-link">Sitemap</a>
+      </li>
+      </ul>
+</nav>
+
+
+<div id="block-global-subtheme-socialmediaicons" class="block block-nal-social-icons block-social-icons-block">
+  
+    
+      <ul class="social-links">
+              <li><a href="https://www.facebook.com/USDA" class="social-link social-link--facebook"><span class="visually-hidden">Facebook</span></a></li>
+              <li><a href="https://twitter.com/National_Ag_Lib" class="social-link social-link--twitter"><span class="visually-hidden">Twitter</span></a></li>
+              <li><a href="https://www.youtube.com/user/NationalAgLibrary" class="social-link social-link--youtube"><span class="visually-hidden">YouTube</span></a></li>
+  </ul>
+
+
+  </div>
+
+  </div>
+
+          </div>
+        </div>
+          
+          <div class="usa-footer__secondary-section">
+        <div class="grid-container">
+          
+<nav class="nal-government-links grid-row" aria-label="Government Links">
+  <ul class="nal-government-links__list tablet:grid-col-12">
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usda.gov/policies-and-links" class="nal-government-links__link">Policies and Links</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usda.gov/plain-writing" class="nal-government-links__link">Plain Writing</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.ars.usda.gov/oc/foia/freedom-of-information-act-and-privacy-act-reference-guide/" class="nal-government-links__link">FOIA</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usda.gov/accessibility-statement" class="nal-government-links__link">Accessibility Statement</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usda.gov/privacy-policy" class="nal-government-links__link">Privacy Policy</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usda.gov/non-discrimination-statement" class="nal-government-links__link">Non-Discrimination Statement</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usda.gov/about-usda/general-information/staff-offices/office-assistant-secretary-civil-rights" class="nal-government-links__link">Office of the Assistant Secretary for Civil Rights (OASCR)</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.ars.usda.gov/docs/quality-of-information/" class="nal-government-links__link">Information Quality</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.ars.usda.gov" class="nal-government-links__link">Agricultural Research Service</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usda.gov" class="nal-government-links__link">USDA.gov</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.usa.gov" class="nal-government-links__link">USA.gov</a>
+      </li>
+          <li class="nal-government-links__list-item">
+        <a href="https://www.whitehouse.gov" class="nal-government-links__link">WhiteHouse.gov</a>
+      </li>
+      </ul>
+  </nav>
+
+        </div>
+      </div>
+      </footer>
+
+
+  </div>
+
+    
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
+<script src="/sites/default/files/js/js_Awj-5PEUZ6zklpIeJ76BLjt9iZb1kkmf-Y1QgSFvTng.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=global_subtheme&amp;include=eJyFTu0KwjAMfKGufaSStVmtpslosk3f3okDQRn-uXDcV5J0DEnaLIxs6hkoFpIRaBhGYMbu8G5U-RZyX2Ygf1D3dkVdRrtgw7DoltUVkUIYDUooO3xzD1e4u8_IkdJquNWMEQi7hcrV3KIT5iJrPCpgTz2sJg2nik-Z3YbjJL2F43qk_Ts2n9GgknqFFf-aTMrefGprqArlV3_BE1bMg-s"></script>
+
+  </body>
+</html>
+

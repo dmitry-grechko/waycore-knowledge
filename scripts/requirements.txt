@@ -1,0 +1,9 @@
+# Core dependencies
+pymupdf>=1.24.0
+sentence-transformers>=2.2.0
+hnswlib>=0.8.0
+httpx>=0.27.0
+
+# Testing
+pytest>=8.0.0
+

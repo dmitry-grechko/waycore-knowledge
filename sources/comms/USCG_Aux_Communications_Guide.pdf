@@ -1,0 +1,134 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>Membership Signin to WOW Website</title>
+    <meta http-equiv="author" content="eCommerce Development" />
+    <meta http-equiv="description" content="Coast Guard Auxiliary Association" />
+    <meta name="keywords" content="Coast Guard Auxiliary Association, CGAuxA, U.S. Coast Guard Auxiliary, Homeland Security, nonprofit organization" />
+    <link href="WOW_signin.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body onload="document.auth.eid.focus()">
+    <!--<center> -->
+    <div id="pagecontainer">
+        <!-- The Top Banner may be changed to suit the application -->
+        <img src="https://auxofficer.cgaux.org/auxoff/USCGAUX_TopBanner.jpg" width="782" height="90" alt="uscgaux logo" longdesc="uscgaux logo" />
+
+        <!-- Removed by MJM DVC-CF 5-6/2024 -->
+        <!-- <p>This site uses your National Member Zone credentials</p>
+
+        <p>
+            <a href="https://auxofficer.cgaux.org/auxoff/activate/new_password.php" target="_blank">Obtain or Change a Password</a> 
+        -->
+
+            <h1>Log Into Auxiliary WOW II Website</h1>
+            <!-- BEGIN LOGIN TABLE -->
+
+            <form id="submit_form" action="" name="auth" method="post">
+                <input type="hidden" name="failure_count" value="" />
+                <table>
+                    
+                        <!-- Removed by MJM DVC-CF 5-6/2024 -->   
+                    <!-- <tr>
+                        <td align="right">
+                            <b>Auxiliary Member ID</b>
+                        </td>
+                        <td colspan="2" align="left">
+                            <input type="text"
+                                name="eid" size="10" value="" />
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td align="right">
+                            <b>Member Zone Password</b>
+                        </td>
+                        <td colspan="2" align="left">
+                            <input type="password"
+                                name="clearpass" value="" size="10" />
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <td align="right">
+                            <b>
+                                Unit                            </b>
+                        </td>
+                        <td align="left">
+                            <input type="text"
+                                name="unit" size="10" value="" />
+                        </td>
+                        <td>(e.g., 081-03-24)</td>
+                    </tr>
+
+                    <!-- Removed by MJM DVC-CF 5-6/2024 -->
+                    <!-- <tr>
+                        <td colspan="3">
+                            <div align="center">
+                                <input type="submit" value="Log In" name="login" />
+                            </div>
+                        </td>
+                    </tr> -->
+                
+                
+                </table>
+
+
+                <!-- ---------------------------------------------------------------------------------- -->
+                <!--  Added by Mike Moore DVC-CF 7/23/2023 Cognito Login -->
+                <!--  Must Un-Remark Each on depending on what environment and what you would like to see -->
+                <!-- ---------------------------------------------------------------------------------- -->
+
+                <!-- ---------------------- FULL LOGO PROD LOCATION--------------------------------- -->
+
+                <!--  Added by: Mike Moore | DVC-CF 2-DEC-2023 | MJM Note:  Change AT PROD CUTOVER -->
+                <!--  Added by: Mike Moore | DVC-CF 2-DEC-2023 | To Change the graphic to a image submit type - so we can then get the unit from a Get -->
+                 <div align="center">
+                    <table style="padding: 0px; margin: 0px; border: 2px solid #011D64; width: 243px;" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr style="background-color: #011D64;">
+                                <td style="background-color: #011D64; border: 2px solid #011D64;">
+                                  <p>
+                                      <input name="CognitoLoginButton" type="image" style="padding: 0px; margin: 0px; background-color: #011D64; line-height: 0px; display: inline-block; top: 0px; left: 0px; font-size: 0px; vertical-align: top;" src="https://uscgauxcognitolegacyproxy.cgaux.org/images/SignInWithUSCGAuxBig.jpg" alt="Sign Up/In with USCGAUX" width="243" height="58" />
+                                  </p>
+
+                                </td>
+                            </tr>
+                            <tr style="background-color: #E5E5E5;">
+                                <td style="background-color: #E5E5E5; padding-bottom: 1px;" align="center">
+                                    <a target="_blank" href="https://cdir-ce-public-content-east.s3.amazonaws.com/cognito/SignUpInwithUSCGAUX.mp4" style="font-family: Arial; font-size: small">Help Video - </a>
+                                    <a target="_blank" href="https://cdir-ce-public-content-east.s3.amazonaws.com/cognito/SignUpInWithUSCGAUX-JobAide.pdf" style="font-family: Arial; font-size: small">Job Aide</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              
+                <!--  ---------------------- LITTLE BLUE DOT TEST OR PROD LOCATION --------------------------------- -->
+                <!--  Added by: Mike Moore | DVC-CF 2-DEC-2023 | To Change the graphic to a image submit type - so we can then get the unit from a Get -->
+                <!-- <div align="center">
+                    <p>
+                        <input name="CognitoLoginButton" type="image" src="https://uscgauxcognitolegacyproxy.cgaux.org/images/LittleBlueDot.jpg" alt="Sign up/in with USCG AUX" />
+                    </p>
+                </div> -->    
+
+                <input type="hidden" name="pass" value="" />
+            </form>
+            <br />
+            <center><font color='#FF0000'> NOTICE: </font></center>
+<table>
+<tr><td align='left'>(1) All information contained in this program is covered by the provisions of the Federal Privacy Act of 1974.</td></tr>
+<tr><td align='left'>(2) Use is strictly limited to listed members of Coast Guard Forces.</td></tr>
+<tr><td align='left'>(3) Commercial use of any information in, or based upon this program is strictly prohibited. Violators will be prosecuted.</td></tr>
+<tr><td align='left'>(4) Please do not distribute any files, and keep your password secure.</td></tr>
+<tr><td align='left'>(5) For problems with this panel, please contact the <a href='https://help.cgaux.org/index.php?/Tickets/Submit/RenderForm/41/'>National Help Desk</a> and submit a ticket that explains the problem.</td></tr>
+<tr><td align='left'>(6) Use of this service indicates your acknowledgment of these provisions.</td></tr>
+</table>                        <div style="text-align:center">
+                Copyright (c) 2025            </div>
+
+            <!-- END LOGIN TABLE -->
+    </div>
+    <!--</center>
+ -->
+</body>
+</html>
+

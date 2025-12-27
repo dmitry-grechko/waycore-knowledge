@@ -1,0 +1,121 @@
+name: Validate PR
+
+on:
+  pull_request:
+    paths:
+      - 'sources/**'
+      - 'SOURCES.md'
+
+jobs:
+  validate:
+    name: Validate Source Files
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      
+      - name: Check file sizes
+        run: |
+          echo "## File Size Check" >> $GITHUB_STEP_SUMMARY
+          
+          # Find large files
+          large_files=$(find sources/ -type f -size +50M 2>/dev/null || true)
+          
+          if [ -n "$large_files" ]; then
+            echo "### ⚠️ Large Files Detected" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "| File | Size |" >> $GITHUB_STEP_SUMMARY
+            echo "|------|------|" >> $GITHUB_STEP_SUMMARY
+            
+            for f in $large_files; do
+              size=$(du -h "$f" | cut -f1)
+              echo "| $f | $size |" >> $GITHUB_STEP_SUMMARY
+            done
+            
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Consider using Git LFS for files over 50MB." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ All files under 50MB" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Fail if any file > 100MB (GitHub limit)
+          if find sources/ -type f -size +100M 2>/dev/null | grep -q .; then
+            echo "❌ Files over 100MB found - use Git LFS!" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+      
+      - name: Check attribution
+        run: |
+          echo "## Attribution Check" >> $GITHUB_STEP_SUMMARY
+          
+          missing=0
+          
+          for f in $(find sources/ -type f \( -name "*.pdf" -o -name "*.json" \) 2>/dev/null || true); do
+            basename=$(basename "$f")
+            if ! grep -q "$basename" SOURCES.md; then
+              echo "⚠️ Missing attribution: $basename" >> $GITHUB_STEP_SUMMARY
+              missing=$((missing + 1))
+            fi
+          done
+          
+          if [ $missing -eq 0 ]; then
+            echo "✅ All files have attribution in SOURCES.md" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Please update SOURCES.md with attribution for new files." >> $GITHUB_STEP_SUMMARY
+          fi
+      
+      - name: Validate PDFs
+        run: |
+          pip install pymupdf
+          
+          echo "## PDF Validation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          python -c "
+          import fitz
+          from pathlib import Path
+          
+          errors = []
+          valid = 0
+          
+          for pdf in Path('sources').rglob('*.pdf'):
+              try:
+                  doc = fitz.open(pdf)
+                  pages = len(doc)
+                  doc.close()
+                  print(f'✅ {pdf.name}: {pages} pages')
+                  valid += 1
+              except Exception as e:
+                  errors.append(f'{pdf.name}: {e}')
+                  print(f'❌ {pdf.name}: {e}')
+          
+          if valid == 0 and len(errors) == 0:
+              print('No PDF files found in sources/')
+          else:
+              print(f'\\nValid: {valid}, Errors: {len(errors)}')
+          
+          if errors:
+              exit(1)
+          " >> $GITHUB_STEP_SUMMARY 2>&1
+
+  lint:
+    name: Lint Python Code
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install ruff
+        run: pip install ruff
+      
+      - name: Run ruff
+        run: ruff check scripts/ tests/
+
