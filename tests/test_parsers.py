@@ -213,3 +213,4 @@ class TestPlantEntry:
         assert entry.scientific_name == "Testus plantus"
         assert entry.safety_level == "caution"
 
+

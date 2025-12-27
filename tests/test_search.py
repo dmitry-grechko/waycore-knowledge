@@ -284,3 +284,4 @@ class TestSafetyLevels:
         finally:
             db_path.unlink()
 
+

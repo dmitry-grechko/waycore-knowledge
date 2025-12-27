@@ -4,9 +4,9 @@
 
 [![Build RAG Index](https://github.com/dmitry-grechko/waycore-knowledge/actions/workflows/build.yml/badge.svg)](https://github.com/dmitry-grechko/waycore-knowledge/actions/workflows/build.yml)
 [![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![Sources](https://img.shields.io/badge/Sources-28_Documents-blue.svg)](#included-sources)
+[![Sources](https://img.shields.io/badge/Sources-88_Documents-blue.svg)](#included-sources)
 
-A curated collection of **public domain** survival, navigation, first aid, and
+A curated collection of **public domain** survival, tactical, medical, and
 outdoor knowledge, pre-processed for RAG (Retrieval-Augmented Generation)
 systems. Built for the [Waycore](https://github.com/dmitry-grechko/waycore)
 tactical field device, but useful for any AI-powered outdoor application.
@@ -17,9 +17,8 @@ This repository solves a common problem: **AI models need domain-specific
 knowledge to be useful in the field**. Instead of every project independently
 collecting, parsing, and indexing survival manuals, we provide:
 
-1. **Curated Sources** - 28 public domain documents covering survival,
-   navigation, first aid, plants, knots, weather, communications, shelter, and
-   hunting
+1. **Curated Sources** - 88 documents covering survival, tactical, medical,
+   navigation, NBC preparedness, and more
 2. **Pre-built Index** - SQLite + vector embeddings ready for semantic search
 3. **Automated Pipeline** - GitHub Actions rebuilds the index when sources
    change
@@ -90,110 +89,137 @@ for label in labels[0]:
 
 ### Summary
 
-| Category      | Documents | Topics                                            |
-| ------------- | --------- | ------------------------------------------------- |
-| 🪖 Survival   | 2         | Shelter, water, food, psychology, mountain ops    |
-| 🧭 Navigation | 2         | Map reading, topographic symbols, land navigation |
-| 🏥 First Aid  | 6         | Wilderness medicine, water disinfection, injuries |
-| 🪢 Knots      | 4         | Essential knots, rigging, climbing knots          |
-| 🌦️ Weather     | 3         | Cloud identification, forecasting, hurricanes     |
-| 🌿 Plants     | 5         | Edible plants, animal tracks, wildlife            |
-| 📻 Comms      | 4         | Morse code, signaling, emergency communications   |
-| 🏕️ Shelter     | 1         | Shelter building techniques                       |
-| 🎣 Hunting    | 1         | Trapping techniques                               |
-| **Total**     | **28**    |                                                   |
+| Category             | Docs   | Topics                                         |
+| -------------------- | ------ | ---------------------------------------------- |
+| 🪖 Survival          | 2      | Shelter, water, food, psychology, mountain ops |
+| 🎯 Tactical          | 3      | Ranger tactics, infantry, camouflage           |
+| 🔫 Firearms          | 2      | Rifle marksmanship, crew-served weapons        |
+| 🧭 Navigation        | 3      | Map reading, topo symbols, land navigation     |
+| 🏥 First Aid         | 6      | Wilderness medicine, water disinfection        |
+| 🩺 Medical           | 7      | TCCC, prolonged care, wound closure, diseases  |
+| 🪢 Knots & Rigging   | 6      | Essential knots, rigging, mountaineering       |
+| 🌦️ Weather            | 3      | Cloud ID, forecasting, hurricanes              |
+| 🥶 Cold Weather      | 4      | Cold ops, avalanche, frostbite, hypothermia    |
+| 🥵 Hot Weather       | 3      | Heat illness, prevention, first aid            |
+| 🌊 Water Survival    | 2      | Sea survival, boat crew rescue                 |
+| 📡 Signaling         | 3      | Visual signals, ground-to-air, EPIRB/PLB       |
+| 📻 Communications    | 4      | Morse code, ARES, emergency comms              |
+| 🌿 Plants & Wildlife | 5      | Edible plants, animal tracks                   |
+| 🦎 Wildlife Threats  | 5      | Snakes, scorpions, spiders, crocodilians       |
+| 🏕️ Shelter            | 1      | Shelter building techniques                    |
+| 🎣 Hunting           | 1      | Trapping techniques                            |
+| 🔧 Primitive Skills  | 5      | Flintknapping, cordage, blacksmithing, traps   |
+| 🍖 Food Preservation | 6      | Canning, drying, fermenting, smoking           |
+| 🚨 Emergency Prep    | 8      | FEMA guides, evacuation, disaster supplies     |
+| 🧠 Psychology        | 4      | PFA, combat stress, leadership                 |
+| ☢️ NBC Preparedness   | 5      | Nuclear survival, CBRN decon, radiological     |
+| **Total**            | **88** |                                                |
 
 ### Key Documents
 
 <details>
-<summary><b>🪖 Survival Manuals</b> (click to expand)</summary>
+<summary><b>🪖 Survival & Tactical</b> (click to expand)</summary>
 
-| Document                          | Description                                                                                                                       | License       |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| **FM 21-76 Survival Manual**      | The definitive US Army survival guide covering psychology, planning, medicine, shelter, water, fire, food, plants, and navigation | Public Domain |
-| **FM 3-97.6 Mountain Operations** | US Army high altitude and mountain survival operations                                                                            | Public Domain |
-
-</details>
-
-<details>
-<summary><b>🧭 Navigation</b> (click to expand)</summary>
-
-| Document                              | Description                                | License       |
-| ------------------------------------- | ------------------------------------------ | ------------- |
-| **FM 3-25.26 Map Reading & Land Nav** | Comprehensive military navigation manual   | Public Domain |
-| **USGS Topographic Map Symbols**      | Official guide to reading topographic maps | Public Domain |
+| Document                          | Description                       | License       |
+| --------------------------------- | --------------------------------- | ------------- |
+| **FM 21-76 Survival Manual**      | Definitive US Army survival guide | Public Domain |
+| **FM 3-97.6 Mountain Operations** | High altitude survival            | Public Domain |
+| **SH 21-76 Ranger Handbook**      | Legendary tactical reference      | Public Domain |
+| **FM 3-21.8 Infantry Platoon**    | Updated infantry doctrine         | Public Domain |
+| **ATTP 3-34.39 Camouflage**       | Concealment, decoys, CCD          | Public Domain |
 
 </details>
 
 <details>
-<summary><b>🏥 First Aid</b> (click to expand)</summary>
+<summary><b>🏥 First Aid & Medical</b> (click to expand)</summary>
 
-| Document                              | Description                                       | License       |
-| ------------------------------------- | ------------------------------------------------- | ------------- |
-| **BSA Wilderness First Aid**          | 16-hour wilderness first aid curriculum           | Educational   |
-| **ICRC First Aid In Brief**           | International Red Cross quick reference           | CC BY-NC-ND   |
-| **Wilderness First Aid Pocket Guide** | Quick reference pocket guide                      | Educational   |
-| **CWS First Aid Workbook**            | Center for Wilderness Safety participant workbook | Educational   |
-| **ASHI Wilderness First Aid Preview** | American Safety & Health Institute preview guide  | Educational   |
-| **EPA Emergency Water Disinfection**  | Water purification methods for emergencies        | Public Domain |
-
-</details>
-
-<details>
-<summary><b>🪢 Knots & Rigging</b> (click to expand)</summary>
-
-| Document                                    | Description                                             | License       |
-| ------------------------------------------- | ------------------------------------------------------- | ------------- |
-| **FM 5-125 Rigging Techniques**             | US Army rigging manual covering knots, hitches, splices | Public Domain |
-| **FM 5-125 Ch 2 Knots & Splices**           | Dedicated chapter on knots and splices                  | Public Domain |
-| **Army Mountain Warfare School Knot Guide** | Quick reference for military mountaineering knots       | Public Domain |
-| **Caltech Alpine Club Knots**               | Climbing-focused knot guide                             | Educational   |
+| Document                             | Description                       | License       |
+| ------------------------------------ | --------------------------------- | ------------- |
+| **BSA Wilderness First Aid**         | 16-hour WFA curriculum            | Educational   |
+| **TCCC Guidelines 2024**             | Tactical Combat Casualty Care     | Public Domain |
+| **Prolonged Casualty Care**          | Extended pre-hospital care        | Public Domain |
+| **EPA Emergency Water Disinfection** | Water purification methods        | Public Domain |
+| **Aerie Backcountry Medicine**       | Comprehensive wilderness medicine | Educational   |
+| **Ethicon Wound Closure Manual**     | Professional suturing guide       | Educational   |
+| **MSF Obstetric & Newborn Care**     | Field obstetric emergencies       | CC BY-NC-SA   |
 
 </details>
 
 <details>
-<summary><b>🌦️ Weather</b> (click to expand)</summary>
+<summary><b>🧭 Navigation & Signaling</b> (click to expand)</summary>
 
-| Document                                  | Description                        | License       |
-| ----------------------------------------- | ---------------------------------- | ------------- |
-| **NOAA Cloud Chart**                      | NWS cloud identification chart     | Public Domain |
-| **NWS Weather Guide**                     | Complete weather forecasting guide | Public Domain |
-| **NOAA Mariner's Tropical Cyclone Guide** | Hurricane preparation and tracking | Public Domain |
-
-</details>
-
-<details>
-<summary><b>🌿 Plants & Wildlife</b> (click to expand)</summary>
-
-| Document                            | Description                                            | License       |
-| ----------------------------------- | ------------------------------------------------------ | ------------- |
-| **Grinnell Wild Edibles Directory** | Wild edible plants identification guide                | Educational   |
-| **FM 21-76 Chapter on Plants**      | Plant identification and foraging from survival manual | Public Domain |
-| **USDA NRCS Plant Fact Sheets**     | Sample plant fact sheets                               | Public Domain |
-| **MN DNR Animal Tracks**            | Animal track identification guide                      | Public Domain |
-| **MD DNR Mammal Tracks Guide**      | Eastern US mammal tracks                               | Public Domain |
+| Document                         | Description                           | License       |
+| -------------------------------- | ------------------------------------- | ------------- |
+| **FM 3-25.26 Map Reading**       | Comprehensive military navigation     | Public Domain |
+| **USGS Topographic Map Symbols** | Official topo map reference           | Public Domain |
+| **FM 21-60 Visual Signals**      | Arm-hand, flag, ground-to-air signals | Public Domain |
+| **NOAA EPIRB/PLB Fact Sheet**    | Emergency beacon operation            | Public Domain |
 
 </details>
 
 <details>
-<summary><b>📻 Communication & Signaling</b> (click to expand)</summary>
+<summary><b>🪢 Knots, Rigging & Primitive Skills</b> (click to expand)</summary>
 
-| Document                          | Description                                               | License       |
-| --------------------------------- | --------------------------------------------------------- | ------------- |
-| **ITU Morse Code Standard**       | International Telecommunication Union Morse code standard | Public Domain |
-| **FM 21-76 Signaling Chapter**    | Signaling techniques from survival manual                 | Public Domain |
-| **ARRL ARES Manual**              | Amateur Radio Emergency Service manual                    | Educational   |
-| **CERT Emergency Communications** | Community Emergency Response Team communications guide    | Public Domain |
+| Document                               | Description                     | License       |
+| -------------------------------------- | ------------------------------- | ------------- |
+| **FM 5-125 Rigging Techniques**        | Army rigging manual             | Public Domain |
+| **FM 3-97.61 Military Mountaineering** | Rope management, climbing       | Public Domain |
+| **FEMA Lifting & Rigging**             | US&R rescue rigging             | Public Domain |
+| **Flintknapping Guide**                | Stone tool making (350 pages)   | Educational   |
+| **Basic Blacksmithing**                | Toolmaking with local materials | Educational   |
+| **Deadfalls and Snares**               | Historic trap construction      | Public Domain |
 
 </details>
 
 <details>
-<summary><b>🏕️ Shelter & 🎣 Hunting</b> (click to expand)</summary>
+<summary><b>🌦️ Weather & Climate Survival</b> (click to expand)</summary>
 
-| Document                       | Description                       | License       |
-| ------------------------------ | --------------------------------- | ------------- |
-| **UK Scouts Shelter Building** | Activity-based shelter guide      | Educational   |
-| **NY Trapping Manual**         | Comprehensive trapping techniques | Public Domain |
+| Document                            | Description                     | License       |
+| ----------------------------------- | ------------------------------- | ------------- |
+| **NWS Weather Guide**               | Complete weather forecasting    | Public Domain |
+| **TC 21-3 Cold Weather Operations** | Army cold weather handbook      | Public Domain |
+| **Ortovox Avalanche Safety**        | Avalanche mechanics and safety  | Educational   |
+| **CDC Heat-Related Illnesses**      | Heat stroke, exhaustion, cramps | Public Domain |
+| **NOAA Mariner's Tropical Cyclone** | Hurricane preparation           | Public Domain |
+
+</details>
+
+<details>
+<summary><b>🦎 Wildlife & Animal Threats</b> (click to expand)</summary>
+
+| Document                          | Description                     | License       |
+| --------------------------------- | ------------------------------- | ------------- |
+| **DoD Venomous Snake Cards**      | 12 common venomous snakes       | Public Domain |
+| **Arizona Scorpions Guide**       | Bark scorpion identification    | Educational   |
+| **UWyo Widow & Recluse Spiders**  | Venomous spider identification  | Educational   |
+| **UF Crocodile/Alligator Safety** | Crocodilian behavior and safety | Educational   |
+| **MN DNR Animal Tracks**          | Animal track identification     | Public Domain |
+
+</details>
+
+<details>
+<summary><b>☢️ NBC & Emergency Preparedness</b> (click to expand)</summary>
+
+| Document                           | Description                        | License       |
+| ---------------------------------- | ---------------------------------- | ------------- |
+| **Nuclear War Survival Skills**    | Definitive civilian nuclear guide  | Public Domain |
+| **FEMA Nuclear 72 Hours**          | First 72 hours post-detonation     | Public Domain |
+| **FM 3-11.5 CBRN Decontamination** | Multiservice decon manual          | Public Domain |
+| **FEMA Are You Ready?**            | Comprehensive citizen preparedness | Public Domain |
+| **FEMA Full Hazard Sheets**        | Complete hazard collection         | Public Domain |
+
+</details>
+
+<details>
+<summary><b>🍖 Food & Preservation</b> (click to expand)</summary>
+
+| Document                            | Description                     | License       |
+| ----------------------------------- | ------------------------------- | ------------- |
+| **USDA Home Canning Guide**         | Definitive 7-part canning guide | Public Domain |
+| **PNW Drying Fruits & Vegetables**  | Comprehensive dehydration       | Educational   |
+| **VA Tech Vegetable Fermentation**  | Sauerkraut, pickles, kimchi     | Educational   |
+| **UC Davis Smoking & Canning Fish** | Fish preservation               | Educational   |
+| **NY Trapping Manual**              | Comprehensive trapping guide    | Public Domain |
 
 </details>
 
@@ -228,7 +254,7 @@ CREATE TABLE entries (
     id TEXT PRIMARY KEY,
     title TEXT NOT NULL,
     content TEXT NOT NULL,
-    category TEXT NOT NULL,          -- survival, navigation, first_aid, plants, knots, weather, comms, shelter, hunting
+    category TEXT NOT NULL,
     subcategory TEXT,
     safety_level TEXT DEFAULT 'safe', -- safe, caution, warning, danger, lethal
     safety_notes TEXT,
@@ -302,8 +328,8 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📈 Stats
 
-- **Total documents**: 28
-- **Categories**: 9
+- **Total documents**: 88
+- **Categories**: 22
 - **Build time**: ~5-10 minutes
 - **Query latency**: <100ms
 

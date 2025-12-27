@@ -164,3 +164,4 @@ class PDFParser:
         if current_chunk and len(current_chunk) >= self.min_chunk_size:
             yield current_chunk
 
+
